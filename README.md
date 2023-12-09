@@ -106,17 +106,7 @@
   * alternating between feature sampling and
 object query refinement.
 
-### drawback
-* intrinsics extrinsics camera matrices 是网络必须的
 
-* FPN
-  * fpn网络不能完全对齐不同层次的特征位置，这导致在coarse to fine 精炼quries时必然产生误差
-  * multi-scale features provide rich information to recognize objects of different sizes
-* 仍然使用sine类型的位置编码加入到queries
-  * 建议直接生成mask位置编码加入到attention 矩阵 
-    * 例如(swin transformer)
-
-# detr 和 detr3d 的损失函数
 
 
 
