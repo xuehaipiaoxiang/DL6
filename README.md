@@ -75,6 +75,7 @@
 * 减少了transformer核心模块attention的计算复杂度，是的加`使用了多尺度特征`到`src sequences`成为了可能
 
 # segmentation 
+* 聚类和分类
 ![](./capture13.png)
 ![](./20231209.png)
 * thing(可分) stuff（不可分）
@@ -82,7 +83,7 @@
 * instance segmentation 在detection的基础上 更细致分割出不同的thing
 * panoptic segmentation 在semantic segmentation基础上对thing区分
 # detection
-* 目标定位与目标分类
+* 目标定位和目标分类
 
 
 
