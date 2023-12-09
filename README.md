@@ -74,37 +74,16 @@
 * 普通transformer本身的计算复杂度限制了`src sequences`的长度
 * 减少了transformer核心模块attention的计算复杂度，是的加`使用了多尺度特征`到`src sequences`成为了可能
 
-# semantic segmentation
-## 有监督的方法
-* 应用：背景虚化 自动驾驶路面分割 
-* 像素级别的目标检测
-* 聚类 再分类
+# segmentation 
 ![](./capture13.png)
+![](./20231209.png)
+* thing(可分) stuff（不可分）
+* semantic segmentation 逐像素的分类（全都视为了stuff）
+* instance segmentation 在detection的基础上 更细致分割出不同的thing
+* panoptic segmentation 在semantic segmentation基础上对thing区分
+# detection
+* 目标定位与目标分类
 
-# MMdetection3D config basic inheritance
-* ## data
-  * dataloader
-  * batch_size
-* ## model
-  * 结构描述
-* ## schedule
-  * 学习率
-* ## default_runtime
-  * 记录日志
-
-> <b> run python tools/misc/print_config.py /PATH/TO/CONFIG to see the complete config.</b>
-
-# change the files to ours
-
-> <b>The `_delete_=True` would replace all old keys in pts_neck field with new keys.</b>
-
-# detr3D
-* object queries are 
-  * learned from the data   
-  * encodes a 3D location
-* coarse to fine
-  * alternating between feature sampling and
-object query refinement.
 
 
 
